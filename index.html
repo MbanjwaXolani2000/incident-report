@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Report Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <img src="https://www.jmpsolutions.co.za/images/logo.png" alt="Company Logo" class="company-logo">
+      <h1>JMP Security Solutions</h1>
+      <p>36 Swallow Street, Rant En Dal, Krugersdorp, 1751</p>
+      <p>011 766 5074 | info@jmpsolutions.co.za</p>
+    </div>
+
+    <h2>Incident Report</h2>
+    <form id="incident-form" action="/submit" method="post" enctype="multipart/form-data">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required><br>
+
+      <label for="site-name">Site Name:</label>
+      <input type="text" id="site-name" name="site_name" required><br>
+
+      <label for="contact-person">Contact Person:</label>
+      <input type="text" id="contact-person" name="contact_person" required><br>
+
+      <label for="site-manager">Site Manager:</label>
+      <input type="text" id="site-manager" name="site_manager" required><br>
+
+      <label for="reported-by">Reported By:</label>
+      <input type="text" id="reported-by" name="reported_by" required><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required><br>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required><br>
+
+      <label for="incident-type">Incident Type:</label>
+      <select id="incident-type" name="incident_type" required>
+        <option value="" disabled selected>Select Incident Type</option>
+        <option value="Theft">Theft</option>
+        <option value="Accident">Accident</option>
+        <option value="Vandalism">Vandalism</option>
+        <option value="Other">Other</option>
+      </select><br>
+
+      <label for="description">Incident Description:</label>
+      <textarea id="description" name="description" required></textarea><br>
+
+      <label for="action-taken">Action Taken:</label> <!-- Updated label -->
+      <textarea id="action-taken" name="action_taken"></textarea><br> <!-- Updated name -->
+
+      <label for="incident-file">Upload Incident File:</label>
+      <input type="file" id="incident-file" name="incident_file"><br>
+
+      <button type="submit">Generate Report</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
